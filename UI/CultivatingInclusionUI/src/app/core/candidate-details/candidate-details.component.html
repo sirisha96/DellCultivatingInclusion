@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne" (click)="experienceSection.toggle()" [attr.aria-expanded]="!experienceSectionCollapsed">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Experience Details
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" #experienceSection="ngbCollapse" [ngbCollapse]="experienceSectionCollapsed" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body" style="text-indent: 12px;">
+                    <div class="row">
+                        <div class="col-3"><span>Organization1 : xxxxxxx xxxx</span></div>
+                        <div class="col-3">From : xxxxxxxx</div>
+                        <div class="col-3">To : xxxxxxx</div>
+                        <div class="col-3">Designation : xxxxxxx</div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-3"><span>Organization2 : xxxxxxx </span></div>
+                        <div class="col-3">From : xxxxxxxx</div>
+                        <div class="col-3">To : xxxxxxx</div>
+                        <div class="col-3">Designation : xxxxxxx</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo" (click)="personalDetails.toggle()" [attr.aria-expanded]="!personalSectionCollapsed">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button">
+                        Personal Details
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" #personalDetails="ngbCollapse" [ngbCollapse]="personalSectionCollapsed" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body" style="text-indent: 12px;">
+                    <div class="row">
+                        <div class="col-3"><span>Highest Qualification : xxxxxxx</span></div>
+                        <div class="col-3"><span>Stream : xxxxxxx</span></div>
+                        <div class="col-3">Graduation Year : xxxx</div>
+                        <div class="col-3">College/University : xxxxxxx</div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-3"><span>Qualification 2 : xxxxxxx</span></div>
+                        <div class="col-3"><span>Stream : xxxxxxx</span></div>
+                        <div class="col-3">Graduation Year : xxxx</div>
+                        <div class="col-3">College/University : xxxxxxx</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree" (click)="ratingSection.toggle()" [attr.aria-expanded]="!FeedBackSectionCollapsed">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button">
+                        Interview Feedback
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" #ratingSection="ngbCollapse" [ngbCollapse]="FeedBackSectionCollapsed" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">Select the Interviewer:</div>
+                            <div class="col-3">
+                                <select class="browser-default custom-select" (change)="onSelectingInterviewerRatingDetails($event.target)">
+                                    <option Selected>Select</option>
+                                    <option value="1">Interviewer1 Rating</option>
+                                    <option value="2">Interviewer2 Rating</option>
+                                </select>
+                            </div>
+
+                        </div><br>
+                        <div class="row">
+                            <div class="col-2">Feedback</div>
+                            <div class="col-6">
+                                <textarea type="text" id="form7" rows="5" cols="50" [(ngModel)]="comments" lass="md-textarea md-textarea-auto form-control" mdbInput></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-2"> Rating </div>
+                            <div class="col-1 font-weight-bold"> {{overallRating}}</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-2">Difference</div>
+                            <div class="col-1 font-weight-bold">2</div>
+
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

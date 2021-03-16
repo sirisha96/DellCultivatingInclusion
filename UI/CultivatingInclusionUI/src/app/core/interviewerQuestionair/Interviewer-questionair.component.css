@@ -1,0 +1,82 @@
+:host ::ng-deep .sv_q_title {
+    font-size: 1rem;
+    color: black;
+    font-weight: 400;
+}
+
+ :host ::ng-deep .btn-green {
+    background-color: blue;
+    color: #fff;
+    border-radius: 3px;
+}
+
+:host ::ng-deep .sv_p_title {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+:host ::ng-deep .sv_p_container {
+    background-color: white;
+}
+
+:host ::ng-deep .sv_q_erbox {
+    color: red;
+}
+
+:host ::ng-deep .sv_main .sv_container .sv_body .sv_p_root .sv_q_rating .sv_q_rating_item:not(:first-child) .sv_q_rating_item_text:not(:hover) {
+    border-left-color: transparent;
+}
+
+:host ::ng-deep .sv_main .sv_container .sv_body .sv_p_root .sv_q_rating .sv_q_rating_item .sv_q_rating_item_text {
+    display: inline-block;
+    min-width: 2em;
+    padding: 0 0.3em;
+    margin-left: -1px;
+    text-align: center;
+}
+
+:host ::ng-deep .sv_main .sv_container .sv_body .sv_p_root .sv_q_rating .sv_q_rating_item>* {
+    word-spacing: initial;
+}
+
+:host ::ng-deep .sv_main.sv_default_css .sv_q_rating_item .sv_q_rating_item_text {
+    border-color: rgb(231, 231, 231);
+    border-top-color: rgb(231, 231, 231);
+    border-right-color: rgb(231, 231, 231);
+    border-bottom-color: rgb(231, 231, 231);
+    border-left-color: rgb(231, 231, 231);
+}
+
+:host ::ng-deep .sv_main .sv_q_rating_item .sv_q_rating_item_text {
+    border: 1px solid #e7e7e7;
+}
+
+:host ::ng-deep .sv_main span {
+    word-break: break-word;
+}
+
+:host ::ng-deep .sv_main .sv_container .sv_body .sv_p_root .sv_q_rating .sv_q_rating_item {
+    cursor: pointer;
+    word-spacing: -0.3em;
+    font-weight: normal;
+    display: inline;
+}
+
+:host ::ng-deep sv_main .sv_container .sv_body .sv_p_root .sv_q_rating {
+    line-height: 2em;
+}
+
+:host ::ng-deep .sv_main.sv_default_css .sv_container {
+    color: rgb(109, 112, 114);
+}
+
+:host ::ng-deep .sv_qstn {
+    padding: 8px;
+}
+
+
+/* :host ::ng-deep .my-error-marker .sv_q_title {
+    color: red;
+} */

@@ -1,0 +1,49 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand *ngIf="navBarVisibility"><a class="navbar-brand" href="#">Dell Hackathon</a></mdb-navbar-brand>
+    <mdb-navbar-brand *ngIf="!navBarVisibility"><a class="navbar-brand" href="#">Candidate Feedback Form</a></mdb-navbar-brand>
+    <mdb-navbar-brand *ngIf="!navBarVisibility"><a class="navbar-brand" href="#">Candidate: XXXXX</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links *ngIf="navBarVisibility">
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/home']">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect>Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect>Payroll</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                Pending Actions<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/candidate-details']">Candidate Feedback</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#" [routerLink]="['/candidate-feedback']">Interviewer feedback</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+                </div>
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+        <!-- Search form -->
+        <form class="form-inline waves-light" mdbWavesEffect>
+            <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Candidate">
+            </div>
+        </form>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
